@@ -1,0 +1,14 @@
+@use "../abstracts/colors";
+
+$vhCalc: (
+    "heightOfHeader": 8rem,
+    "paddingOfBody": 3.4rem,
+);
+
+$box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0, 0.2);
+
+$font-family: 'Open Sans', sans-serif;
+
+$gradient: linear-gradient(map-get(colors.$baseColors,"background"), 30%, (map-get(colors.$baseColors, "backgroundDark")));
+
+$sectionWidth: 40% 60%;

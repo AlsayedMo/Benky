@@ -1,0 +1,46 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+@media screen and (max-width:62.5rem) {
+    .banky {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        &__accounts {
+            align-items: flex-start;
+            position: relative;
+            padding-bottom: 2rem;
+            
+
+            &::after {
+                @include mixins.afterStyle;
+                height: 0.1rem;
+                border: 0.2rem;
+                position: absolute;
+                bottom: 0;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    body {
+        padding: 0;
+    }
+
+    .header {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        display: flex;
+    }
+
+    .banky {
+
+        &__transactions {
+            height: auto;
+            overflow: auto;
+        }
+    }
+}

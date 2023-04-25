@@ -1,0 +1,6 @@
+Als gebruiker wil ik naar een andere
+rekeneing kunnen switchen.
+
+Als gebruiker wil ik zien hoeveel geld er word overgmaakt.
+
+Als gebruiker wil ik zien hoeveel geld er word afgeschreven.

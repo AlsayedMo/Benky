@@ -1,0 +1,54 @@
+{
+    "Bankrekening": [
+        {
+            "from/to": "Mootje",
+            "amount": 10
+        },
+        {
+            "from/to": "BobDe",
+            "amount": 100
+        },
+        {
+            "from/to": "Plop",
+            "amount": -100
+        },
+        {
+            "from/to": "Pieter",
+            "amount": -100
+        },
+        {
+            "from/to": "Elmia",
+            "amount": -100
+        },
+        {
+            "from/to": "Carmen",
+            "amount": 10
+        },
+        {
+            "from/to": "Jeroen",
+            "amount": 100
+        },
+        {
+            "from/to": "lee",
+            "amount": -100
+        },
+        {
+            "from/to": "Paart",
+            "amount": -100
+        },
+        {
+            "from/to": "Elmo",
+            "amount": -100
+        }
+    ],
+    "ZZP-Rekening": [
+        {
+            "from/to": "Bedrijf AirBods",
+            "amount": 5685099
+        },
+        {
+            "from/to": "Bedrijf Kleding",
+            "amount": 265000
+        }
+    ]
+}

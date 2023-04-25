@@ -1,0 +1,6 @@
+@use "../../abstracts/colors";
+
+
+body {
+scrollbar-color: map-get(colors.$baseColors, "backgroundDark") white;   /* scroll thumb and track */ 
+}

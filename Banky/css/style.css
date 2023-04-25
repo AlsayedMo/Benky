@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+body {
+  padding: 3.4rem;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 0;
+  background: linear-gradient(#073e5f, 30%, #570c85);
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 62.5rem) {
+  .banky {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .banky__accounts {
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 2rem;
+  }
+  .banky__accounts::after {
+    content: "";
+    width: 100%;
+    height: 3%;
+    background: linear-gradient(#073e5f, 30%, #570c85);
+    position: absolute;
+    border: 0.2rem;
+    bottom: 0;
+    left: 0;
+    height: 0.1rem;
+    border: 0.2rem;
+    position: absolute;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  body {
+    padding: 0;
+  }
+  .header {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+  }
+  .banky__transactions {
+    height: auto;
+    overflow: auto;
+  }
+}
+.header {
+  background: #fff;
+  height: 8rem;
+  max-width: auto;
+  font-family: "Open Sans", sans-serif;
+  padding: 2rem;
+  border-top-right-radius: 5rem;
+  border-top-left-radius: 5rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10rem, 1fr));
+}
+.header__logo {
+  display: flex;
+  font-size: 300%;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  grid-column-start: 2;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.banky {
+  background: white;
+  min-height: calc(100vh - 8rem - 3.4rem);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 6rem;
+  margin: 0 auto;
+}
+.banky__section {
+  display: flex;
+}
+.banky__section--left {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.banky__header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+.banky__header > div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.banky__money {
+  font-weight: 400;
+  font-size: 250%;
+}
+.banky__logo {
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(#073e5f, 30%, #570c85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  transition: 0.9s all;
+}
+.banky__eye {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(#073e5f, 30%, #570c85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+.banky__transactions {
+  padding: 2rem;
+  padding-top: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 50rem;
+  overflow-y: scroll;
+}
+.banky__transaction {
+  display: flex;
+  font-size: 120%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.banky__transaction::after {
+  content: "";
+  width: 100%;
+  height: 3%;
+  background: linear-gradient(#073e5f, 30%, #570c85);
+  position: absolute;
+  border: 0.2rem;
+  bottom: 0;
+  left: 0;
+}
+.banky__name, .banky__amount {
+  font-weight: 300;
+  font-size: 120%;
+}
+.banky__transferButton {
+  background: linear-gradient(#073e5f, 30%, #570c85);
+  font-size: 100%;
+  border: none;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  transition: 0.4s all;
+  margin-left: 2rem;
+}
+.banky__transferButton:hover {
+  cursor: pointer;
+  background: white;
+  color: #570c85;
+  box-shadow: inset 0 0 0 0.2rem #570c85;
+}
+.banky__accounts {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.banky__switchAccount, .banky__eyeButton {
+  background: none;
+  border: none;
+}
+.banky__switchAccount:hover, .banky__eyeButton:hover {
+  cursor: pointer;
+}
+.banky__switchAccount:hover .banky__logo, .banky__eyeButton:hover .banky__logo {
+  background: blueviolet;
+  border-radius: 50%;
+}
+.banky__account {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.banky__nameOfAccount {
+  font-weight: 400;
+  font-size: 120%;
+}
+
+body {
+  scrollbar-color: #570c85 white; /* scroll thumb and track */
+}
+
+.avatarWrapper {
+  height: 100%;
+  width: 100%;
+  grid-column-start: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #E5E0FF;
+}
+.avatar__head {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  top: 50%;
+  background: #570c85;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: 0.8s all;
+}
+.avatar__body {
+  width: 70%;
+  height: 60%;
+  border-radius: 50%;
+  background: #570c85;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 100%;
+}
+.avatar:hover .avatar__head {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/*# sourceMappingURL=style.css.map */

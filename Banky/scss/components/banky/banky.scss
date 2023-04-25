@@ -1,0 +1,156 @@
+@use "../../abstracts/vars";
+@use "../../abstracts/colors";
+@use "../../abstracts/mixins";
+
+.banky {
+    background: white;
+    min-height: calc(100vh - map-get(vars.$vhCalc, "heightOfHeader") - map-get(vars.$vhCalc, "paddingOfBody"));
+    display: grid;
+    grid-template-columns: vars.$sectionWidth;
+    padding: 6rem;
+    margin: 0 auto;
+
+    &__section {
+        display: flex;
+
+        &--left {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+
+        &>div {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+    }
+
+    &__money {
+        font-weight: 400;
+        font-size: 250%;
+    }
+
+    &__logo {
+        border-radius: 50%;
+        font-size: 2rem;
+        width: 5rem;
+        height: 5rem;
+        background: vars.$gradient;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: map-get(colors.$baseColors, "whiteColor");
+        box-shadow: vars.$box-shadow;
+        transition: 0.9s all;
+    }
+
+    &__eye {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: vars.$gradient;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: map-get(colors.$baseColors, "whiteColor");
+        box-shadow: vars.$box-shadow;
+    }
+
+
+    &__transactions {
+        padding: 2rem;
+        padding-top: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        height: 50rem;
+        overflow-y: scroll;
+    }
+
+    &__transaction {
+        display: flex;
+        font-size: 120%;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding-bottom: 0.5rem;
+
+        &::after {
+            @include mixins.afterStyle;
+        }
+    }
+
+    &__name,
+    &__amount {
+        font-weight: 300;
+        font-size: 120%;
+    }
+
+    &__transferButton {
+        background: vars.$gradient;
+        font-size: 100%;
+        border: none;
+        padding: 1rem;
+        margin-top: 2rem;
+        color: map-get(colors.$baseColors, "whiteColor");
+        border-radius: .5rem;
+        box-shadow: vars.$box-shadow;
+        transition: 0.4s all;
+        margin-left: 2rem;
+
+        &:hover {
+            cursor: pointer;
+            background: white;
+            color: map-get(colors.$baseColors, "backgroundDark");
+            box-shadow: inset 0 0 0 0.2rem map-get(colors.$baseColors, "backgroundDark");
+        }
+    }
+
+    &__accounts {
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    &__switchAccount,
+    &__eyeButton {
+        background: none;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+
+
+        }
+
+        &:hover .banky__logo {
+            background: blueviolet;
+            border-radius: 50%;
+        }
+    }
+
+    &__account {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__nameOfAccount {
+        font-weight: 400;
+        font-size: 120%;
+    }
+}

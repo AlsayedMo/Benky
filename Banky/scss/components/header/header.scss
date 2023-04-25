@@ -1,0 +1,29 @@
+@use "../../abstracts/vars";
+@use "../../abstracts/mixins";
+@use "../../abstracts/colors";
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.header {
+    background: map-get(colors.$baseColors, "whiteColor");
+    height: map-get(vars.$vhCalc, "heightOfHeader");
+    max-width: auto;
+    font-family: vars.$font-family;
+    padding: 2rem;
+    border-top-right-radius: 5rem;
+    border-top-left-radius: 5rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10rem, 1fr));
+
+    &__logo {
+        display: flex;
+        font-size: 300%;
+        font-weight: 400;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        grid-column-start: 2;
+        font-family: 'Shadows Into Light', cursive;
+
+    }
+}
